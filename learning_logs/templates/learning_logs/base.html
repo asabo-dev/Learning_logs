@@ -42,6 +42,12 @@
                     {% endif %}
                 </ul> <!-- End of account-related links -->
 
+                {% if user.is_authenticated %}
+                    <form action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button name="submit" class="btn btn-outline-secondary btn-sm">Log out</button>
+                    </form>
+                {% endif %}
 
             </div> <!-- Closes collapsible parts of navbar -->
 
