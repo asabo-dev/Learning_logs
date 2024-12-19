@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-s@p3qkir9$l)&on4ebkqdmp*t-9+ol5otx78u^5(m2xa636zz_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'master-7rqtwti-eo3w3hlqpdaq2.au.platformsh.site',
+    'your-other-domain.com',
+]
+
 
 
 # Application definition
@@ -141,11 +145,6 @@ from platformshconfig import Config
 config = Config()
 if config.is_valid_platform():
     ALLOWED_HOSTS.append('platformsh.site')
-#    ALLOWED_HOSTS = [
-#    'master-7rqtwti-eo3w3hlqpdaq2.au.platformsh.site',
-#    'your-other-domain.com',
-#]
-
 
     if config.appDir:
         STATIC_ROOT = Path(config.appDir) / 'static'
