@@ -140,7 +140,12 @@ from platformshconfig import Config
 
 config = Config()
 if config.is_valid_platform():
-    ALLOWED_HOSTS.append('platformsh.site')
+#    ALLOWED_HOSTS.append('platformsh.site')
+    ALLOWED_HOSTS = [
+    'master-7rqtwti-eo3w3hlqpdaq2.au.platformsh.site',
+    'your-other-domain.com',
+]
+
 
     if config.appDir:
         STATIC_ROOT = Path(config.appDir) / 'static'
