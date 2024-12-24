@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'master-7rqtwti-eo3w3hlqpdaq2.au.platformsh.site',
-    'your-other-domain.com',
+    'your-other-domain.com', 'http://127.0.0.1:8000/'
 ]
 
 
